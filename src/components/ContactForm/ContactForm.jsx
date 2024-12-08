@@ -12,7 +12,7 @@ const ContactSchema = Yup.object().shape({
 		.max(50, `The "Name" is too Long!`)
 		.required('The "Name" is Required field!'),
 	number: Yup.string()
-		// .matches(/^\+?[0-9]+$/, 'The "Number" can only contain digits and a "+" at the beginning.')
+		.matches(/^\+?[0-9]+$/, 'The "Number" can only contain digits and a "+" at the beginning.')
 		.min(3, `The "Number" is too Short!`)
 		.max(50, `The "Number" is too Long!`)
 		.required('The "Number" is Required field!'),
