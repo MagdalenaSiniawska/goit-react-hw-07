@@ -24,8 +24,8 @@ const ContactList = () => {
 			{!loading &&
 				contacts &&
 				!error &&
-				contacts.map(({ id, number, name }) => (
-					<Contact key={id} id={id} number={number} name={name} />
+				contacts.map(({ id, phone, name }) => (
+					<Contact key={id} id={id} number={phone} name={name} />
 				))}
 			{error && <div>`Error: ${error} `</div>}
 		</ul>
